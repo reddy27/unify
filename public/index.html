@@ -1,42 +1,69 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
-	<style>
-	body{
-		background-color: #FFFFFF;
-		font-size:20px;
-    line-height: 1.25;
-    font-weight: 600;
-    letter-spacing: .004em;
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-	}
-</style>
+    <title>Unify</title>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-size: 20px;
+            line-height: 1.25;
+            font-weight: 600;
+            letter-spacing: .004em;
+            font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        }
+        h1 {
+  color:#111;
+}
+h1:before {
+  content: attr(data-before);
+  word-break: break-all;
+  opacity: 0.5;
+}
+h1:after {
+  content: attr(data-after);
+  word-break: break-all;
+  opacity: 0.5;
+}
 
-	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-<link href='https://rawgit.com/Reklino/gromlicons/master/style.css' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="ang.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
-  <script type="text/javascript" src="ang.js"></script>
-  <script type="text/javascript">
-  	var options = {
-  		   height: "600px",
-    page: '8'
-};
-	var options1 = {
-		 height: "300px",
-    page: '6'
-};
-  </script>
+.button {
+  padding: 20px 40px;
+  font: inherit;
+  color: #140d09;
+  background-color: #c1bba0;
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  transition: all 0.3s cubic-bezier(0, 1, 0, 1);
+  cursor: pointer;
+}
+.button.show {
+  opacity: 1;
+  transform: translate3d(0, 30px, 0);
+}
 
-
-
-   
-
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href='https://rawgit.com/Reklino/gromlicons/master/style.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="ang.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+    <script type="text/javascript" src="ang.js"></script>
+    <script type="text/javascript">
+        var options = {
+            height: "600px"
+            , page: '8'
+        };
+        var options1 = {
+            height: "300px"
+            , page: '6'
+        };
+    </script>
 </head>
-<body ng-app="angularResizable" >
-	
-	
+
+<body ng-app="angularResizable">
+    <!-- <img src="unifylogo.png" width="120px" height="70px">
+    <img src="https://cdn.dribbble.com/users/400493/screenshots/1726042/fox.gif" width="120px" height="70px"> -->
+<h1 style="margin: 0px 0 -76px"></h1>
+<div class="button" onclick="init('〰 💰🅰tYA 🤘')">Again</div>
     <main>
         <!-- <nav resizable r-directions="['right']">
             <span class="icon-big icon_expand-1"></span>
@@ -59,43 +86,36 @@
 I would like to provide eVisit Feature to our members
 AC:
 <ol>
-	<li>Integrate to iFrame</li>
-	<li>configure proxy setting</li>
-	<li>investigate camera/photo attachment functionality for web views</li>
+    <li>Integrate to iFrame</li>
+    <li>configure proxy setting</li>
+    <li>investigate camera/photo attachment functionality for web views</li>
 </ol>
                 </section>
             </div> -->
             <div class="row">
                 <section id="three" style="background-color: #FFFFFF" resizable r-directions="['right']" r-flex="true" style="">
-                	<div id="example1"></div>
-                	<!-- <iframe width="740" height="600" src="https://mozilla.github.io/pdf.js/web/viewer.html"></iframe> -->
-                <!--     <p>Completely seperates <strong>layout logic</strong> from <strong>resize logic</strong>. All layout logic must be done by you in the CSS (as it should be).</p> -->
-               
+                    <div id="example1"></div>
+                    <!-- <iframe width="740" height="600" src="https://mozilla.github.io/pdf.js/web/viewer.html"></iframe> -->
+                    <!--     <p>Completely seperates <strong>layout logic</strong> from <strong>resize logic</strong>. All layout logic must be done by you in the CSS (as it should be).</p> -->
                 </section>
-               <!--  <section id="one" resizable r-directions="['right']" r-flex="true" >US</section> -->
+                <!--  <section id="one" resizable r-directions="['right']" r-flex="true" >US</section> -->
                 <div style="display: flex;flex-direction: column; flex: 0 0 33%;justify-content: center;align-items: center;">
-                	<section id="four" style="width: 500px;flex: 0 0 40%;background-color: #FFFFFF" resizable r-directions="['bottom']" r-flex="true">
-                		<p>As a <bold>KP Product Owner</bold> 
-			I would like to provide eVisit Feature to our members
-			</p>
-			<ol>
-				<li>Integrate to iFrame</li>
-				<li>configure proxy setting</li>
-				<li>investigate camera/photo attachment functionality for web views</li>
-			</ol>
-			
-                	</section>
-                	<section id="four" style="width: 500px;flex: 0 0 10%; background-color: #FFFFFF" resizable r-directions="['bottom']" r-flex="true">
-                		
-                		<input type="text" name="theName" value="type here to change"
-  onblur="if(this.value==''){ this.value='DefaultValue'; this.style.color='#BBB';}"
-  onfocus="if(this.value=='DefaultValue'){ this.value=''; this.style.color='#000';}"
-  style="color:#BBB;" /><br>
-  <label>status: coming soon!</label>
-                	</section>
-                	<section id="five" style="width: 500px;flex: 0 0 10%; background-color: #FFFFFF" resizable r-directions="['bottom']" r-flex="true">
-                		<div id="example2"></div>
-                	</section>
+                    <section id="four" style="width: 500px;flex: 0 0 40%;background-color: #FFFFFF" resizable r-directions="['bottom']" r-flex="true">
+                        <p>As a
+                            <bold>KP Product Owner</bold> I would like to provide eVisit Feature to our members </p>
+                        <ol>
+                            <li data-editable>Integrate to iFrame</li>
+                            <li data-editable>configure proxy setting</li>
+                            <li data-editable>investigate camera/photo attachment functionality for web views</li>
+                        </ol>
+                    </section>
+                    <section id="four" style="width: 500px;flex: 0 0 10%; background-color: #FFFFFF" resizable r-directions="['bottom']" r-flex="true">
+                        
+                        <label>status: coming soon!</label>
+                    </section>
+                    <section id="five" style="width: 500px;flex: 0 0 10%; background-color: #FFFFFF" resizable r-directions="['bottom']" r-flex="true">
+                        <div id="example2"></div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -106,16 +126,78 @@ AC:
             <a href="https://codepen.io/Reklino/" target="_blank">
                 <span class="icon icon_jacob"></span>
             </a>
-        </span> -->
-        <span style="float: right">
+        </span> --><span style="float: right">
         <!-- <a href="https://github.com/Reklino/angular-resizable" target="_blank">
-            Fork it on GitHub <span class="icon icon_code"></span>
-        </a> -->
-        </span>
+            Fork it on GitHub <span class="icon icon_code"></span> </a> --> </span>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="pdfobject.js"></script>
-		<script>PDFObject.embed("example.pdf", "#example1", options);</script>
-		<script>PDFObject.embed("Evisit-Editorial.pdf", "#example2", options1);</script>
+    <script>
+        PDFObject.embed("example.pdf", "#example1", options);
+    </script>
+    <script>
+        PDFObject.embed("Evisit-Editorial.pdf", "#example2", options1);
+    </script>
+    <script type="text/javascript">
+        $('body').on('click', '[data-editable]', function () {
+            var $el = $(this);
+            var $input = $('<input/>').val($el.text());
+            $el.replaceWith($input);
+            var save = function () {
+                var $p = $('<li data-editable />').text($input.val());
+                $input.replaceWith($p);
+            };
+            $input.one('blur', save).focus();
+        });
+        var dictionary = "0123456789qwertyuiopasdfghjklzxcvbnm!?></\a`~+*=@#$%".split('');
 
+var el = document.querySelector('h1');
+var btn = document.querySelector('.button');
+
+var ran = function() {
+ return Math.floor(Math.random() * dictionary.length)
+}
+
+var ranString = function(amt) {
+  var string = '';
+  for(var i = 0; i < amt; i++) {
+    string += dictionary[ran()];
+  }
+  return string;
+}
+
+var init = function(str) {
+  var count = str.length;
+  var delay = 50;
+  
+  //btn.classList.remove('show');
+  el.innerHTML = '';
+  
+  var gen = setInterval(function() {
+    el.setAttribute('data-before', ranString(count));
+    el.setAttribute('data-after', ranString(count));
+    if(delay > 0) {
+      delay--;
+    }
+    else {
+      if(count < str.length) {
+        el.innerHTML += str[str.length - count-1];
+      }
+      count--;
+      if(count === -1) {
+        clearInterval(gen);
+        showButton();
+      }
+    }
+  }, 32);
+}
+
+var showButton = function() {
+  //btn.classList.add('show');
+}
+
+init('Unify 👍');
+    </script>
 </body>
+
 </html>
