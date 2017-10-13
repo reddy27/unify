@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	body{
+		background-color: #FFFFFF;
+		font-size:20px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: .004em;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+	}
+</style>
+
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<link href='https://rawgit.com/Reklino/gromlicons/master/style.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="ang.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+  <script type="text/javascript" src="ang.js"></script>
+  <script type="text/javascript">
+  	var options = {
+  		   height: "600px",
+    page: '8'
+};
+	var options1 = {
+		 height: "300px",
+    page: '6'
+};
+  </script>
+
+
+
+   
+
+</head>
+<body ng-app="angularResizable" >
+	
+	
+    <main>
+        <!-- <nav resizable r-directions="['right']">
+            <span class="icon-big icon_expand-1"></span>
+            <br /><br />
+            <h1>
+              Angular
+              Resizable
+            </h1>
+            <p>
+              A teensy weensy directive for creating resizable containers.
+            </p>
+        </nav> -->
+        <div class="content">
+            <!-- <div class="row" resizable r-directions="['bottom']" r-flex="true">
+                <section id="one" resizable r-directions="['right']" r-flex="true">
+                    <p>PFD view place holder.</p>
+                </section>
+                <section id="two">
+                    <p>As a KP Product Owner
+I would like to provide eVisit Feature to our members
+AC:
+<ol>
+	<li>Integrate to iFrame</li>
+	<li>configure proxy setting</li>
+	<li>investigate camera/photo attachment functionality for web views</li>
+</ol>
+                </section>
+            </div> -->
+            <div class="row">
+                <section id="three" style="background-color: #FFFFFF" resizable r-directions="['right']" r-flex="true" style="">
+                	<div id="example1"></div>
+                	<!-- <iframe width="740" height="600" src="https://mozilla.github.io/pdf.js/web/viewer.html"></iframe> -->
+                <!--     <p>Completely seperates <strong>layout logic</strong> from <strong>resize logic</strong>. All layout logic must be done by you in the CSS (as it should be).</p> -->
+               
+                </section>
+               <!--  <section id="one" resizable r-directions="['right']" r-flex="true" >US</section> -->
+                <div style="display: flex;flex-direction: column; flex: 0 0 33%;justify-content: center;align-items: center;">
+                	<section id="four" style="width: 500px;flex: 0 0 40%;background-color: #FFFFFF" resizable r-directions="['bottom']" r-flex="true">
+                		<p>As a <bold>KP Product Owner</bold> 
+			I would like to provide eVisit Feature to our members
+			</p>
+			<ol>
+				<li>Integrate to iFrame</li>
+				<li>configure proxy setting</li>
+				<li>investigate camera/photo attachment functionality for web views</li>
+			</ol>
+			
+                	</section>
+                	<section id="four" style="width: 500px;flex: 0 0 10%; background-color: #FFFFFF" resizable r-directions="['bottom']" r-flex="true">
+                		
+                		<input type="text" name="theName" value="type here to change"
+  onblur="if(this.value==''){ this.value='DefaultValue'; this.style.color='#BBB';}"
+  onfocus="if(this.value=='DefaultValue'){ this.value=''; this.style.color='#000';}"
+  style="color:#BBB;" /><br>
+  <label>status: coming soon!</label>
+                	</section>
+                	<section id="five" style="width: 500px;flex: 0 0 10%; background-color: #FFFFFF" resizable r-directions="['bottom']" r-flex="true">
+                		<div id="example2"></div>
+                	</section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- <span>
+            Made with <span class="icon icon_coffee"></span> by
+            <a href="https://codepen.io/Reklino/" target="_blank">
+                <span class="icon icon_jacob"></span>
+            </a>
+        </span> -->
+        <span style="float: right">
+        <!-- <a href="https://github.com/Reklino/angular-resizable" target="_blank">
+            Fork it on GitHub <span class="icon icon_code"></span>
+        </a> -->
+        </span>
+    </footer>
+    <script src="pdfobject.js"></script>
+		<script>PDFObject.embed("example.pdf", "#example1", options);</script>
+		<script>PDFObject.embed("Evisit-Editorial.pdf", "#example2", options1);</script>
+
+</body>
+</html>
