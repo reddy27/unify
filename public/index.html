@@ -40,6 +40,24 @@ h1:after {
   opacity: 1;
   transform: translate3d(0, 30px, 0);
 }
+.green{
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+}
+.yellow{
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+.red{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
 
     </style>
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
@@ -63,7 +81,8 @@ h1:after {
     <!-- <img src="unifylogo.png" width="120px" height="70px">
     <img src="https://cdn.dribbble.com/users/400493/screenshots/1726042/fox.gif" width="120px" height="70px"> -->
 <h1 style="margin: 0px 0 -76px"></h1>
-<div class="button" onclick="init('〰 💰🅰tYA 🤘')">Again</div>
+<div class="button" onclick="init('〰 💰🅰tYA 🤘 Vakkaleri')">Again</div>
+
     <main>
         <!-- <nav resizable r-directions="['right']">
             <span class="icon-big icon_expand-1"></span>
@@ -111,7 +130,18 @@ AC:
                     </section>
                     <section id="four" style="width: 500px;flex: 0 0 10%; background-color: #FFFFFF" resizable r-directions="['bottom']" r-flex="true">
                         
-                        <label>status: coming soon!</label>
+                       <label>Status :</label> 
+                        <select id="status" >
+                          <option value="green">Green</option>
+                          <option value="yellow">Yellow</option>
+                          <option value="red">Red</option>
+                        </select> &nbsp; &nbsp; &nbsp; &nbsp;
+                        <span style="display: inline-flex;">
+                            <div class="green" ></div>
+                        <div class="yellow"></div>
+                        <div class="red"></div>  
+                        </span>
+                       
                     </section>
                     <section id="five" style="width: 500px;flex: 0 0 10%; background-color: #FFFFFF" resizable r-directions="['bottom']" r-flex="true">
                         <div id="example2"></div>
@@ -197,6 +227,30 @@ var showButton = function() {
 }
 
 init('Unify 👍');
+  $('.yellow').css('display', "none");
+            $('.red').css('display', "none");
+
+ $("#status").change(function () {
+        var end = this.value;
+        var color = $('#status').find(":selected").text();
+       
+        switch(color) {
+            case "green":
+            $('.green').css('display', "");
+            break;
+            case "Yellow":
+            $('.yellow').css('display', "");
+            $('.green').css('display', "none");
+            $('.red').css('display', "none");
+            break;
+            case "Red":
+            $('.red').css('display', "");
+            $('.green').css('display', "none");
+            $('.yellow').css('display', "none");
+            break;
+
+        }
+    });
     </script>
 </body>
 
