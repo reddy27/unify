@@ -6,59 +6,89 @@
     <style>
         body {
             background-color: #FFFFFF;
-            font-size: 20px;
+            font-size: 14px;
             line-height: 1.25;
             font-weight: 600;
             letter-spacing: .004em;
             font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
         }
+        
         h1 {
-  color:#111;
-}
-h1:before {
-  content: attr(data-before);
-  word-break: break-all;
-  opacity: 0.5;
-}
-h1:after {
-  content: attr(data-after);
-  word-break: break-all;
-  opacity: 0.5;
-}
-
-.button {
-  padding: 20px 40px;
-  font: inherit;
-  color: #140d09;
-  background-color: #c1bba0;
-  opacity: 0;
-  transform: translate3d(0, 50px, 0);
-  transition: all 0.3s cubic-bezier(0, 1, 0, 1);
-  cursor: pointer;
-}
-.button.show {
-  opacity: 1;
-  transform: translate3d(0, 30px, 0);
-}
-.green{
-    width: 20px;
-    height: 20px;
-    background-color: green;
-    border-radius: 50%;
-}
-.yellow{
-    width: 20px;
-    height: 20px;
-    background-color: yellow;
-    border-radius: 50%;
-}
-.red{
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    border-radius: 50%;
-}
-
+            color: #111;
+        }
+        
+        h1:before {
+            content: attr(data-before);
+            word-break: break-all;
+            opacity: 0.5;
+        }
+        
+        h1:after {
+            content: attr(data-after);
+            word-break: break-all;
+            opacity: 0.5;
+        }
+        
+        .button {
+            padding: 20px 40px;
+            font: inherit;
+            color: #140d09;
+            background-color: #c1bba0;
+            opacity: 0;
+            transform: translate3d(0, 50px, 0);
+            transition: all 0.3s cubic-bezier(0, 1, 0, 1);
+            cursor: pointer;
+        }
+        
+        .button.show {
+            opacity: 1;
+            transform: translate3d(0, 30px, 0);
+        }
+        
+        .green {
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            border-radius: 50%;
+        }
+        
+        .yellow {
+            width: 20px;
+            height: 20px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+        
+        .red {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            //background-color: #333;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: #111;
+        }
     </style>
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <link href='https://rawgit.com/Reklino/gromlicons/master/style.css' rel='stylesheet' type='text/css'>
@@ -67,99 +97,157 @@ h1:after {
     <script type="text/javascript" src="ang.js"></script>
     <script type="text/javascript">
         var options = {
-            height: "600px"
+            height: "300px"
             , page: '8'
         };
         var options1 = {
-            height: "300px"
-            , page: '6'
+            height: "320px"
+            , page: '5'
         };
     </script>
 </head>
 
-<body ng-app="angularResizable">
-    <!-- <img src="unifylogo.png" width="120px" height="70px">
-    <img src="https://cdn.dribbble.com/users/400493/screenshots/1726042/fox.gif" width="120px" height="70px"> -->
-<h1 style="margin: 0px 0 -76px"></h1>
-<div class="button" onclick="init('〰 💰🅰tYA 🤘 Vakkaleri')">Again</div>
+<body ng-app="angularResizable" style="margin:0">
+   
+     <ul>
+    <div style ="background-color:#010101">
+        <img src="unifylogo_small-2.png"  style="float: left;padding-left: 30px">
 
+                  
+    </div>
+    </ul>
+
+    
+    <!-- <span>
+        <bold>US23455 : </bold> lore_ipusm user story <img src="images.png" width="30px" height="30px" style="border-radius: 50%">
+    </span> -->
+      
+    
+
+
+           
+    <!--        <div style="
+    display: flex;
+    width: 457px;
+    height: 46px;
+    background-color: lightgrey;
+    float: right;
+">
+<p> <bold>US23455</bold> lore_ipusm user story</p>
+                    
+                    </div> -->
+    <!--  <img src="https://cdn.dribbble.com/users/400493/screenshots/1726042/fox.gif" width="120px" height="70px"> -->
+    <!-- <h1 style="margin: 0px 0 -76px"></h1>
+<div class="button" onclick="init('〰 💰🅰tYA 🤘 Vakkaleri')">Again</div> -->
     <main>
-        <!-- <nav resizable r-directions="['right']">
-            <span class="icon-big icon_expand-1"></span>
-            <br /><br />
-            <h1>
-              Angular
-              Resizable
-            </h1>
-            <p>
-              A teensy weensy directive for creating resizable containers.
-            </p>
-        </nav> -->
         <div class="content">
-            <!-- <div class="row" resizable r-directions="['bottom']" r-flex="true">
+            <div class="row" resizable r-directions="['bottom']" r-flex="true">
                 <section id="one" resizable r-directions="['right']" r-flex="true">
-                    <p>PFD view place holder.</p>
+                    <!-- <div style="position: absolute;top: -23%;left: 67%;">
+                        <p>
+                            <bold>US23455 : </bold> lore_ipusm user story <img src="images.png" width="30px" height="30px" style="border-radius: 50%">
+                        </p>
+                    </div> -->
+                    
+
+                <div class="avatar">
+                      <img src="https://off2class-sol5y8kuafeozy9kld6.netdna-ssl.com/wp-content/uploads/2015/11/Off2class-AvatarProfilePic-01-Colour-James.jpg" /> James McDougall
+                    </div>
+                    <br>
+                <p style="
+    font-size: 25px;
+">US17985: Provide eVisit Option to members</p>
+                    <p>As a
+                        <bold>KP Product Owner</bold>
+                        <br> I would like to provide eVisit Feature to our members </p>
+                    <p>AC:</p>
+                    <ol>
+                        <li data-editable>Integrate to iFrame, and add scope lore_ipusum is a random</li>
+                        <li data-editable>Configure proxy setting investigate testing end to end flow,  delivery</li>
+                        <li data-editable>Investigate camera/photo attachment functionality for web views</li>
+                    </ol>
+                    
+                    </p>
+
                 </section>
                 <section id="two">
-                    <p>As a KP Product Owner
-I would like to provide eVisit Feature to our members
-AC:
-<ol>
-    <li>Integrate to iFrame</li>
-    <li>configure proxy setting</li>
-    <li>investigate camera/photo attachment functionality for web views</li>
-</ol>
-                </section>
-            </div> -->
-            <div class="row">
-                <section id="three" style="background-color: #FFFFFF" resizable r-directions="['right']" r-flex="true" style="">
                     <div id="example1"></div>
-                    <!-- <iframe width="740" height="600" src="https://mozilla.github.io/pdf.js/web/viewer.html"></iframe> -->
-                    <!--     <p>Completely seperates <strong>layout logic</strong> from <strong>resize logic</strong>. All layout logic must be done by you in the CSS (as it should be).</p> -->
                 </section>
-                <!--  <section id="one" resizable r-directions="['right']" r-flex="true" >US</section> -->
-                <div style="display: flex;flex-direction: column; flex: 0 0 33%;justify-content: center;align-items: center;">
-                    <section id="four" style="width: 500px;flex: 0 0 40%;background-color: #FFFFFF" resizable r-directions="['bottom']" r-flex="true">
-                        <p>As a
-                            <bold>KP Product Owner</bold> I would like to provide eVisit Feature to our members </p>
-                        <ol>
-                            <li data-editable>Integrate to iFrame</li>
-                            <li data-editable>configure proxy setting</li>
-                            <li data-editable>investigate camera/photo attachment functionality for web views</li>
-                        </ol>
-                    </section>
-                    <section id="four" style="width: 500px;flex: 0 0 10%; background-color: #FFFFFF" resizable r-directions="['bottom']" r-flex="true">
-                        
-                       <label>Status :</label> 
-                        <select id="status" >
-                          <option value="green">Green</option>
-                          <option value="yellow">Yellow</option>
-                          <option value="red">Red</option>
-                        </select> &nbsp; &nbsp; &nbsp; &nbsp;
-                        <span style="display: inline-flex;">
-                            <div class="green" ></div>
-                        <div class="yellow"></div>
-                        <div class="red"></div>  
-                        </span>
-                       
-                    </section>
-                    <section id="five" style="width: 500px;flex: 0 0 10%; background-color: #FFFFFF" resizable r-directions="['bottom']" r-flex="true">
-                        <div id="example2"></div>
-                    </section>
-                </div>
+            </div>
+            <div class="row">
+                <section id="three" resizable r-directions="['right']" r-flex="true">
+                   
+                 <label>Story Points :</label>
+                       <ul>
+                        <li data-editable>8 points</li>
+                        </li>
+                    </ul>
+                    <br>
+                    <br>
+                    <label> Status : </label>
+                <!--     <div >
+                       <select id="selectStatus">
+                          <option value="volvo">Green</option>
+                          <option value="saab">Yellow</option>
+                          <option value="mercedes">Red</option>
+                        </select>
+ 
+                    </div> -->
+                    <div class="green" ></div>
+                    <div>
+                        <label>Notes: </label>
+                        <textarea ></textarea>
+                    </div>
+
+                </section>
+                <section id="four">
+                    <div id="example2"></div>
+                </section>
             </div>
         </div>
+        <!-- <div class="content">
+            <div class="row" resizable r-directions="['bottom']" r-flex="true">
+                <section id="three" resizable r-directions="['right']" r-flex="true">
+                    <div id="example2"></div>
+                </section>
+                <section id="four">
+                    <label>Status :</label>
+                    <select id="status">
+                        <option value="green">Green</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="red">Red</option>
+                    </select> &nbsp; &nbsp; &nbsp; &nbsp; <span style="display: inline-flex;">
+                            <div class="green" ></div>
+                        <div class="yellow"></div>
+                        <div class="red"></div>
+                        </span>
+                </section>
+                
+            </div>
+            <div class="row">
+                <section id="one" resizable r-directions="['right']" r-flex="true">
+                    <div id="example1"></div>
+                </section>
+                <div> </div>
+                <section id="two">
+                    <div style="position: absolute;top: -23%;left: 67%;">
+                        <p>
+                            <bold>US23455 : </bold> lore_ipusm user story <img src="images.png" width="30px" height="30px" style="border-radius: 50%"> </p>
+                    </div>
+                    <p>As a
+                        <bold>KP Product Owner</bold>
+                        <br> I would like to provide eVisit Feature to our members </p>
+                    <p>AC:</p>
+                    <ol>
+                        <li data-editable>Integrate to iFrame</li>
+                        <li data-editable>configure proxy setting</li>
+                        <li data-editable>investigate camera/photo attachment functionality for web views</li>
+                    </ol>
+                </section>
+            </div>
+        </div> -->
     </main>
-    <footer>
-        <!-- <span>
-            Made with <span class="icon icon_coffee"></span> by
-            <a href="https://codepen.io/Reklino/" target="_blank">
-                <span class="icon icon_jacob"></span>
-            </a>
-        </span> --><span style="float: right">
-        <!-- <a href="https://github.com/Reklino/angular-resizable" target="_blank">
-            Fork it on GitHub <span class="icon icon_code"></span> </a> --> </span>
-    </footer>
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="pdfobject.js"></script>
     <script>
@@ -179,78 +267,27 @@ AC:
             };
             $input.one('blur', save).focus();
         });
-        var dictionary = "0123456789qwertyuiopasdfghjklzxcvbnm!?></\a`~+*=@#$%".split('');
-
-var el = document.querySelector('h1');
-var btn = document.querySelector('.button');
-
-var ran = function() {
- return Math.floor(Math.random() * dictionary.length)
-}
-
-var ranString = function(amt) {
-  var string = '';
-  for(var i = 0; i < amt; i++) {
-    string += dictionary[ran()];
-  }
-  return string;
-}
-
-var init = function(str) {
-  var count = str.length;
-  var delay = 50;
-  
-  //btn.classList.remove('show');
-  el.innerHTML = '';
-  
-  var gen = setInterval(function() {
-    el.setAttribute('data-before', ranString(count));
-    el.setAttribute('data-after', ranString(count));
-    if(delay > 0) {
-      delay--;
-    }
-    else {
-      if(count < str.length) {
-        el.innerHTML += str[str.length - count-1];
-      }
-      count--;
-      if(count === -1) {
-        clearInterval(gen);
-        showButton();
-      }
-    }
-  }, 32);
-}
-
-var showButton = function() {
-  //btn.classList.add('show');
-}
-
-init('Unify 👍');
-  $('.yellow').css('display', "none");
-            $('.red').css('display', "none");
-
- $("#status").change(function () {
-        var end = this.value;
-        var color = $('#status').find(":selected").text();
-       
-        switch(color) {
+        $('.yellow').css('display', "none");
+        $('.red').css('display', "none");
+        $("#selectStatus").change(function () {
+            var end = this.value;
+            var color = $('#selectStatus').find(":selected").text();
+            switch (color) {
             case "green":
-            $('.green').css('display', "");
-            break;
+                $('.green').css('display', "");
+                break;
             case "Yellow":
-            $('.yellow').css('display', "");
-            $('.green').css('display', "none");
-            $('.red').css('display', "none");
-            break;
+                $('.yellow').css('display', "");
+                $('.green').css('display', "none");
+                $('.red').css('display', "none");
+                break;
             case "Red":
-            $('.red').css('display', "");
-            $('.green').css('display', "none");
-            $('.yellow').css('display', "none");
-            break;
-
-        }
-    });
+                $('.red').css('display', "");
+                $('.green').css('display', "none");
+                $('.yellow').css('display', "none");
+                break;
+            }
+        });
     </script>
 </body>
 
