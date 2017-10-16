@@ -8,9 +8,9 @@ p {
   margin-top: 0;
 }
 
-h1 {
+/*h1 {
   margin: 6px 0 24px;
-}
+}*/
 
 ul {
   margin: 0;
@@ -58,7 +58,7 @@ main {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  padding-bottom: 70px;
+  //padding-bottom: 70px;
   background: #fff;
 }
 
@@ -96,14 +96,14 @@ main {
 .row.resizable {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 300px;
-          flex: 0 0 300px;
+          flex: 0 0 350px;
 }
 
 section {
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 1.25em 1.75em;
-  background: #ddd;
+  //background: #ddd;
   border: 7px solid #fff;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -113,22 +113,23 @@ section {
 section.resizable {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 300px;
-          flex: 0 0 60%;
+          flex: 0 0 38%
 }
 
 #one {
-  background: #7bd389;
-  color: #2d883c;
+  background: #d6d1c6;
+  //color: #2d883c;
 }
 
 #two {
-  background: #aedcc0;
-  color: #49a86e;
+  //background: #aedcc0;
+  //color: #49a86e;
+      margin: -1% 0 0 0;
 }
 
 #three {
-  background: #38e4ae;
-  color: #107354;
+  background: #d6d1c6;
+  //color: #107354;
 }
 
 #four {
@@ -194,7 +195,7 @@ footer a:hover:after {
   position: absolute;
   box-sizing: border-box;
   display: block;
-  border: 1px solid #ccc;
+  border: 1px solid #191717;
 }
 
 .rg-right span, .rg-left span {
@@ -244,4 +245,25 @@ footer a:hover:after {
   left: 0;
   top: 0;
   margin-left: -14px;
+}
+
+.avatar img {
+  width: 12%;
+  border-radius: 50%;
+}
+
+.owner{
+  box-sizing: border-box;
+  padding: 0 40px;
+  
+  
+  width: 70%;
+  
+  position:absolute;
+  right: 0;
+  
+  vertical-align: top;
+  top: 50%;
+  transform: translateY(-50%)
+
 }
